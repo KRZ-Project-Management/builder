@@ -1,4 +1,0 @@
-function showComments(){(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.async=true; js.src = "//connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v15.0&appId=611070289228964&amp;autoLogAppEvents=1"; fjs.parentNode.insertBefore(js, fjs);}(document,'script','facebook-jssdk'));}
-$('.open_fb_comments').on('click',function(){
-$(this).css('display','none');$('#fb_comments').css('display','block');showComments();$('.close_fb_comments').css('display','block');});
-$('.close_fb_comments').on('click',function(){$(this).css('display','none');$('#fb_comments').css('display','none');$('.open_fb_comments').css('display','block');});
