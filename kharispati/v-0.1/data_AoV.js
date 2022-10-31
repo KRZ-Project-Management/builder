@@ -2,7 +2,7 @@ function backload(){$('#pages_Label .loadinggames').css('background-image','url(
 if(r_param == null){
 if(r_release != null){
 $('#pages_Label .btn-load-list,#pages_Label .readyloadcontent').addClass('hidden');
-CallAjaxRole(cur_Label,r_release,colorLabel);
+CallAjaxYear(cur_Label,r_release,colorLabel);
 $('#feature_pages_Label').html('<div class="loadinggames"><div class="circlegames" style="border-color:'+colorLabel+'"/></div></div>'); backload(); let getpagetitle=$(document).attr('title'); $(document).attr('title',r_release+' - '+getpagetitle); $('link[rel="canonical"]').attr('href',updateParam(updateParam(document.location.href,'release',r_release),'m','')); $('link[rel="alternate"]').attr('href',updateParam(document.location.href,'release',r_release)); $('#pages_Label .title_Label').html(r_release+'<br>'+titleLabel); $('#pages_Label ul.role_tabs').addClass('hidden'); let dataimg=$('meta[property="og:image"]').attr('content'),datadesc=$('meta[name="description"]').attr('content'),dataimgpubh=$('meta[name="msapplication-TileImage"]').attr('content'), jsonldScript = document.createElement('script'); jsonldScript.setAttribute('type', 'application/ld+json'); jsonldScript.textContent = '{"@context":"https://schema.org/","@type":"WebPage","mainEntityOfPage": {"@id":"'+updateParam(document.location.href,'m','')+'"},"headline":"'+r_release+' - '+getpagetitle+'","description":"'+datadesc+'","image":{"@type":"ImageObject","url": "'+dataimg+'"},"author":{"@type":"Person","url": "https://kharispati.blogspot.com","name":"KharisPati"},"publisher":{"@type":"Organization","name":"KharisPati","logo":{"@type":"ImageObject","url": "'+dataimgpubh+'"}}}'; document.head.appendChild(jsonldScript);
 }else{
 CallAjax(cur_Label,call_back,colorLabel);
